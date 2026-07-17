@@ -34,17 +34,22 @@ const Home = () => {
   useEffect(() => {
     const timerId = setInterval(() => {
       setCurrent((c) => (c + 1) % images.length);
-    }, 5000);
+    }, 6000);
     return () => clearInterval(timerId);
   }, []);
 
   return (
-    <div>
-      <img
-        src={images[current].src}
-        alt={images[current].alt}
-        className="h-[70vh] w-full object-cover"
-      />
+    <div className="relative h-[70vh]">
+      {images.map((image, i) => (
+        <img
+          src={image.src}
+          alt={image.alt}
+          className={`absolute inset-0 w-full h-full object-cover ${
+            current === i ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-3500`}
+          key={image.src}
+        />
+      ))}
     </div>
   );
 };
