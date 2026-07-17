@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="py-6 bg-stone-100">
-      <ul className="gap-12 justify-center hidden md:flex">
+      <ul className="gap-20 justify-center hidden md:flex">
         {links.map((link) => (
           <li key={link.to}>
             <Link to={link.to}>{link.label}</Link>
