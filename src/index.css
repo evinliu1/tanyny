@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter Variable", sans-serif;
+  --font-serif: "Playfair Display Variable", serif;
+  --font-sans: "Montserrat Variable", sans-serif;
 }

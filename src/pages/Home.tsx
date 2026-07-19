@@ -40,6 +40,7 @@ const Home = () => {
 
   return (
     <div className="relative h-[70vh]">
+      <div className="absolute bg-linear-to-b from-black/50 to-transparent w-full"></div>
       {images.map((image, i) => (
         <img
           src={image.src}

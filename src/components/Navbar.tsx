@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
-  { to: "/photos", label: "Photos" },
+  { to: "/", label: "HOME" },
+  { to: "/about", label: "ABOUT" },
+  { to: "/contact", label: "CONTACT" },
+  { to: "/photos", label: "PHOTOS" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="py-6 bg-stone-100">
-      <ul className="gap-20 justify-center hidden md:flex">
+    <nav className="py-6 text-white z-10 absolute w-full text-shadow-md bg-black/10">
+      <ul className="gap-20 justify-center hidden md:flex font-semibold text-2xl">
         {links.map((link) => (
           <li key={link.to}>
             <Link to={link.to}>{link.label}</Link>
