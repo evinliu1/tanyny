@@ -39,18 +39,30 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="relative h-[70vh]">
-      <div className="absolute bg-linear-to-b from-black/50 to-transparent w-full"></div>
-      {images.map((image, i) => (
-        <img
-          src={image.src}
-          alt={image.alt}
-          className={`absolute inset-0 w-full h-full object-cover ${
-            current === i ? "opacity-100" : "opacity-0"
-          } transition-opacity duration-3500`}
-          key={image.src}
-        />
-      ))}
+    <div>
+      <div className="relative h-[50vh] md:h-[60vh]">
+        {images.map((image, i) => (
+          <img
+            src={image.src}
+            alt={image.alt}
+            className={`absolute inset-0 w-full h-full object-cover ${
+              current === i ? "opacity-100" : "opacity-0"
+            } transition-opacity duration-3500`}
+            key={image.src}
+          />
+        ))}
+      </div>
+      <div className="min-h-[30vh] flex flex-col items-center justify-center bg-amber-50">
+        <h1 className="font-serif text-4xl md:text-7xl font-semibold">
+          Jari Muller
+        </h1>
+        <p className="py-4 max-w-2xl px-6 text-center">
+          Jari teaches students of all levels and age, from complete beginners
+          through open advanced. He teaches ballroom dance, but he also shapes
+          his students to become confident and elegant in ways that extend
+          beyond the ballroom and into many other facets of life.
+        </p>
+      </div>
     </div>
   );
 };

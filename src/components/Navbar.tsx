@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="py-6 text-white z-10 absolute w-full text-shadow-md bg-black/10">
+    <nav className="py-6 text-white z-10 absolute w-full bg-black/5">
       <ul className="gap-20 justify-center hidden md:flex font-semibold text-2xl">
         {links.map((link) => (
           <li key={link.to}>
@@ -28,8 +28,8 @@ const Navbar = () => {
         {isOpen ? <X /> : <Menu />}
       </button>
       {isOpen && (
-        <div className="fixed inset-0 bg-stone-200 z-0">
-          <ul className="h-full flex flex-col text-3xl items-center divide-y">
+        <div className="fixed inset-0 bg-blue-100 z-0">
+          <ul className="h-full flex flex-col text-3xl font-semibold items-center divide-y">
             {links.map((link) => (
               <li
                 className="w-full text-center flex-1 flex items-center justify-center"
